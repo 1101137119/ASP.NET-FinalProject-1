@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net">
+  
+  <object id="activityController" scope="request" singleton="false" type="KuasWebApp.Controllers.ActivityController, KuasWebApp">
+    <property name="ActivityService" ref="activityService" />
+  </object>
+
+  <object id="activityService" type="KuasCore.Services.Impl.ActivityService, KuasCore">
+    <property name="ActivityDao" ref="activityDao" />
+  </object>
+
+  <object id="activityDao" type="KuasCore.Dao.Impl.ActivityDao, KuasCore">
+    <property name="AdoTemplate" ref="adoTemplate" />
+  </object>
+  
+
+</objects>
